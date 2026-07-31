@@ -1,0 +1,23 @@
+// TradingView Chart Integration
+
+
+new TradingView.widget({
+
+    "width": "100%",
+    "height": 600,
+
+    "symbol": "FX:XAUUSD",
+
+    "interval": "15",
+
+    "timezone": "Etc/UTC",
+
+    "theme": "dark",
+
+    "style": "1",
+
+    "locale": "en",
+
+    "container_id": "tradingview_chart"
+
+});
