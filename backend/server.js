@@ -44,15 +44,31 @@ message:
 app.post("/register",(req,res)=>{
 
 
-const user = req.body;
+const {
+name,
+email,
+password
+}=req.body;
+
+
+
+console.log("New User:", {
+name,
+email
+});
 
 
 
 res.json({
 
+success:true,
+
 message:"User registered successfully",
 
-user:user
+user:{
+name,
+email
+}
 
 });
 
