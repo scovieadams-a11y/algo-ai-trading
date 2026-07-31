@@ -95,7 +95,6 @@ const loginForm =
 document.getElementById("loginForm");
 
 
-
 if(loginForm){
 
 
@@ -105,11 +104,6 @@ function(event){
 
 
 event.preventDefault();
-
-
-
-let savedUser =
-JSON.parse(localStorage.getItem("user"));
 
 
 
@@ -123,9 +117,65 @@ document.getElementById("loginPassword").value;
 
 
 
+fetch("http://localhost:5000/login",{
+
+method:"POST",
+
+headers:{
+
+"Content-Type":"application/json"
+
+},
+
+body:JSON.stringify({
+
+email:email,
+
+password:password
+
+})
+
+})
+
+
+.then(response=>response.json())
+
+
+.then(data=>{
+
+
+if(data.success){
+
+
+alert(data.message);
+
+
+
+localStorage.setItem(
+"loggedIn",
+"true"
+);
+
+
+
+window.location.href =
+"dashboard.html";
+
+
+}
+
+
+});
+
+
+});
+
+
+}
+
+
 if(
 savedUser &&
-savedUser.email === email &&
 savedUser.password === password
 ){
 
