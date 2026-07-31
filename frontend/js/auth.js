@@ -32,14 +32,46 @@ document.getElementById("password").value;
 // Later we replace this with a real database
 
 
+fetch("http://localhost:5000/register",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+name:name,
+
+email:email,
+
+password:password
+
+})
+
+})
+
+.then(response=>response.json())
+
+.then(data=>{
+
+
+alert(data.message);
+
+
+
 localStorage.setItem(
 "user",
-JSON.stringify({
-name:name,
-email:email,
-password:password
-})
+JSON.stringify(data.user)
 );
+
+
+
+window.location.href="login.html";
+
+
+});
 
 
 
