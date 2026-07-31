@@ -56,3 +56,77 @@ window.location.href="login.html";
 
 
 }
+// Login System
+
+
+const loginForm =
+document.getElementById("loginForm");
+
+
+
+if(loginForm){
+
+
+loginForm.addEventListener(
+"submit",
+function(event){
+
+
+event.preventDefault();
+
+
+
+let savedUser =
+JSON.parse(localStorage.getItem("user"));
+
+
+
+let email =
+document.getElementById("loginEmail").value;
+
+
+
+let password =
+document.getElementById("loginPassword").value;
+
+
+
+if(
+savedUser &&
+savedUser.email === email &&
+savedUser.password === password
+){
+
+
+alert("Login successful!");
+
+
+localStorage.setItem(
+"loggedIn",
+"true"
+);
+
+
+
+window.location.href =
+"dashboard.html";
+
+
+}
+
+else{
+
+
+alert(
+"Invalid email or password"
+);
+
+
+}
+
+
+
+});
+
+
+}
