@@ -94,13 +94,22 @@ password
 
 
 
+console.log("Login Attempt:", email);
+
+
+
 res.json({
+
+success:true,
 
 message:"Login successful",
 
+user:{
 email:email
+}
 
 });
+
 
 
 });
