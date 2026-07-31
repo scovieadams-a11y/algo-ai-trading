@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Scanner - Adams AI Trading</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav>
+
+<div class="logo">
+Adams AI Trading
+</div>
+
+
+<ul>
+
+<li>
+<a href="dashboard.html">Dashboard</a>
+</li>
+
+<li>
+<a href="signals.html">Signals</a>
+</li>
+
+</ul>
+
+
+</nav>
+
+</header>
+
+
+
+
+<section class="hero">
+
+
+<div class="hero-content">
+
+
+<h1>
+AI Market Scanner
+</h1>
+
+
+<p>
+Analyze Forex, Metals, Crypto and Indices using multiple timeframes.
+</p>
+
+
+
+<div class="card">
+
+
+<h3>Select Market</h3>
+
+
+<select id="market">
+
+<option>XAUUSD (Gold)</option>
+
+<option>EURUSD</option>
+
+<option>GBPUSD</option>
+
+<option>BTCUSD</option>
+
+<option>NAS100</option>
+
+</select>
+
+
+<br><br>
+
+
+<h3>Select Timeframe</h3>
+
+
+<select id="timeframe">
+
+<option>5 Minutes</option>
+
+<option>15 Minutes</option>
+
+<option>1 Hour</option>
+
+<option>4 Hours</option>
+
+<option>Daily</option>
+
+</select>
+
+
+
+<br><br>
+
+
+<button id="scanButton">
+Start AI Scan
+</button>
+
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Analysis Result
+</h3>
+
+
+<p id="result">
+
+Waiting for scan...
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+<script src="js/scanner.js"></script>
+
+
+</body>
+
+</html>
